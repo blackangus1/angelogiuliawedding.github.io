@@ -1,0 +1,172 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="navbar">
+          <!-- <div class="user-logo"><img src="userlogo.jpg"" /></div> -->
+          <nav>
+            <ul>
+              <li class="selectedLink" name="welcome">Welcome</li>
+              <li name="venue">Venue <br> &<br> Church</li>
+              <li name="accomodation">Accomodation</li>
+              <li name="itinerary">Itinerary <br> & <br> Event Program</li>
+              <li name="rsvp">RSVP</li>
+              <li name="about">About</li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main>
+        <div class="card active welcome" data-welcome>
+          <div class="title">Welcome</div>
+          <div class="welcome-content">
+            <section class="banner-area">
+              <div class="banner-image"></div>
+              <h2>Angelo <span>&</span> Giulia,</h2>
+              <h1>We are getting married </h1>
+              <h3>02 September 2023</h3>
+             </section>
+          </div>
+        </div>
+        <div class="card venue" data-venue>
+          <div class="title">The Venue</div>         
+          <div class="venue-content">
+            <div>
+              <h5><a name="venue"></a></h5>
+              <div class="banner-image"></div>
+              <h2>Cascina  Camporosso, 24057 Martinengo (BG)</h2>
+              <p>Per raggiungerci, passare da via Molino Nuovo accedendo da via Serioletto, strada completamente asfaltata di recente..</p>
+              <p>To reach us go from via Molino Nuovo entering from via Serioletto, road completely paved recently..</p>
+               <p>ATTENZIONE :</p>
+               <p>Google Maps a seconda della vostra posizione potrebbe suggerirvi di accedere a via Molino Nuovo passando
+               da via Cortenuova, sconsigliamo questa via di accesso.</p>
+               <p>Depending on your position, Google Maps could suggest you to access via Molino Nuovo by passing
+                   from via Cortenuova, we do not recommend this access route.</p>
+          </div>
+          <div class="google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.9282353044455!2d9.770061415560386!3d45.55176917910215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47814410644385ef%3A0xbb115fd0cf3cb16e!2sAgriturismo%20il%20Camporosso!5e0!3m2!1sit!2sit!4v1680960991754!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>  
+        </div>
+        </div>
+        <div class="card accomodation" data-accomodation>
+          <div class="title">Accomodation(Hotel)</div>
+          <div class="accomodation-content">
+            <p>For all the guests from outside of Milan or Italy who want to be assisted on their accomodation
+              please contact LEONORE at this number +39 3711770746 or by mail leonoredubber@gmail.com</p>
+              <p>We suggest to look after this hotels:</p>
+              <br>
+              Hotel romano di lombardia
+              <br>
+              Residenza del tenore
+              <br>
+              Conchiglia
+              <br>
+              Mariett
+              </div>
+        </div>
+        <div class="card itinerary" data-itinerary>
+          <div class="title">Itinerary</div>
+          <div class="itinerary-content">
+            <div class="filter-btns row">
+              <div class="filter-btn active" data-tab="1">Friday, September 01</div>
+
+            </div>
+              <div class="filter-cards tab1 t-active">
+                <div class="row">
+                </div>
+                  <div>
+                    <h3>Vigil Prayer and pizza dinner at 20pm</h3>
+                  </div>
+                </div>
+                <div class="filter-btns row" data-tab="2">Friday, September 03</div>
+                     <h3>Brunch at 11am</h3>
+                </div>
+                <br>
+                <p> 
+                  For all the guests who want to do a music perform or a joke please contact Simona at this number +39 3473053954.
+                </p>
+              </div>
+                   <!-- /*RSVP*/ -->
+              <div class="card rsvp" data-rsvp>
+                <div class="title">RSVP</div>
+                  <div class="rsvp-content" >
+                    <form action="weddingguestlist" method="POST">
+                      <div class="form row">
+                        <div class="input row">
+                            <label for="">First Name <span>*</span></label>
+                              <input type="text" required name="" id="input file"> 
+                  </div>
+  
+                <div class="input row">
+                  <label for="">Last Name <span>*</span></label>
+                  <input type="text" required name="" id="">
+                </div>
+                <div class="input row">
+                  <label for="">Email <span>*</span></label>
+                  <input type="email"required name="" id="">
+                </div>
+                <div class="input row">
+                  <label for="">Food allergy<span>*</span></label>
+                  <input type="text" name="" id="">
+                </div> 
+             
+                <div class="form row">
+                  <div class="input row">
+                      <label for="">Nr of guests<span>*</span></label>
+                      <input type="number" required name="" id="">
+                  </div>
+ 
+                <div class="option row">
+                  <div class="row">
+                    <input type="checkbox" name="" id="">   
+                          Accept with pleasure
+                </div>
+                <div class="row">
+                    <input type="checkbox" name="" id="">
+                        Regretfully Decline
+                </div>
+                <div class="row">
+                    <input type="checkbox" name="" id="">
+                    Present At The Prayer Vigil And At The Pizzata
+                  </div>
+                <div class="row">
+                    <input type="checkbox" name="" id="">
+                          Present at the brunch
+                </div>
+                <!-- <button type="submit" onclick="return confirm ('Thanks you for your time')">Submit</button> -->
+                <button type="submit" onclick="">Submit</button>
+
+                </div>
+                </div>
+                </div>
+   </form>
+          </div>
+        </div>
+        <div class="card about" data-about>
+          <div class="title">About</div>
+          <div class="content">
+            <p>For us, your presence is the best gift!</p>
+                    <p>For those who wish, they can contribute to the realization of our dreams,</p>
+                    <P>we already thank all those who want to contribute to help us achieve them!</P>
+                    <p>IBAN: DE63 1203 0000 1023 1067 90</p>
+                    <p>current account at Deutsche Kreditbank</p>
+                    <p>payable to  Giulia Ariel Dubber</p>
+                    <p>Causal transfer: Wedding gift</p>
+          </div>
+        </div>
+        
+      </main>
+    </div>
+    <script>
+      // const showMessage = () => {
+      //   alert("Hello JavaScript");
+      // };
+    </script>
+  </body>
+</html>
