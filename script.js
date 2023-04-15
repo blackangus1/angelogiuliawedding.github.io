@@ -42,7 +42,7 @@ function sendConfirmation(form) {
 
   jQuery.post(
     {
-      url: 'https://jessicaeroberto.it/administration/ag_wedding/confirmation',
+      url: 'https://jessicaeroberto.it/administration/ag-wedding/confirmation',
       data: data,
       contentType: 'application/json'
   })
