@@ -1,19 +1,23 @@
 
-
+<html>
+  <head>
+    <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- <meta name="viewport" content='20000' /> -->
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
       <aside>
         <div class="navbar">
-          <!-- <div class="user-logo"><img src="userlogo.jpg"" /></div> -->
           <nav>
             <ul>
               <li class="selectedLink" name="welcome">Welcome</li>
-              <li name="venue">Venue <br> &<br> Church</li>
+              <li name="church">Church</li>
+              <li name="venue">Venue</li>
               <li name="accomodation">Accomodation</li>
               <li name="itinerary">Itinerary <br> & <br> Event Program</li>
               <li name="rsvp">RSVP</li>
@@ -28,12 +32,28 @@
           <div class="welcome-content">
             <section class="banner-area">
               <div class="banner-image"></div>
-              <h2>Angelo <span>&</span> Giulia,</h2>
+              <h2>Giulia <span>&</span> Angelo,</h2>
               <h1>We are getting married </h1>
               <h3>02 September 2023</h3>
              </section>
           </div>
         </div>
+        <div class="card church" data-church>
+          <br>
+          <div class="title">The Church</div>         
+          <div class="church-content">
+            <div>
+              <h5><a name="church"></a></h5>
+              <h2>Santuario Campi Veri</h2>
+              <p>Via Campiveri 6, 24050 Cividate Al Piano, BERGAMO</p>
+              <br>
+              <div class="banner-image"></div> 
+            </div>
+            <div class="google-map-church">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.8597319012238!2d9.834419315560407!3d45.55314717910204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478141888e8f8af3%3A0x8dca4380cbd0db49!2sSantuario%20Campi%20Veri!5e0!3m2!1sit!2sit!4v1681287350253!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div> 
+      </div>
         <div class="card venue" data-venue>
           <div class="title">The Venue</div>         
           <div class="venue-content">
@@ -41,8 +61,10 @@
               <h5><a name="venue"></a></h5>
               <div class="banner-image"></div>
               <h2>Cascina  Camporosso, 24057 Martinengo (BG)</h2>
-              <p>Per raggiungerci, passare da via Molino Nuovo accedendo da via Serioletto, strada completamente asfaltata di recente..</p>
-              <p>To reach us go from via Molino Nuovo entering from via Serioletto, road completely paved recently..</p>
+              <p>Per raggiungerci, passare da via Molino Nuovo accedendo da via Serioletto, strada completamente asfaltata di recente.</p>
+              <p>To reach us go from via Molino Nuovo entering from via Serioletto, road completely paved recently.
+              </p>
+              <br>
                <p>ATTENZIONE :</p>
                <p>Google Maps a seconda della vostra posizione potrebbe suggerirvi di accedere a via Molino Nuovo passando
                da via Cortenuova, sconsigliamo questa via di accesso.</p>
@@ -59,8 +81,9 @@
           <div class="accomodation-content">
             <p>For all the guests from outside of Milan or Italy who want to be assisted on their accomodation
               please contact LEONORE at this number +39 3711770746 or by mail leonoredubber@gmail.com</p>
-              <p>We suggest to look after this hotels:</p>
               <br>
+              <p>We suggest to look after this hotels:</p>
+              <!-- <br> -->
               Hotel romano di lombardia
               <br>
               Residenza del tenore
@@ -84,63 +107,63 @@
                     <h3>Vigil Prayer and pizza dinner at 20pm</h3>
                   </div>
                 </div>
-                <div class="filter-btns row" data-tab="2">Friday, September 03</div>
+                <div class="filter-btns row" data-tab="2">Sunday, September 03</div>
                      <h3>Brunch at 11am</h3>
                 </div>
                 <br>
                 <p> 
-                  For all the guests who want to do a music perform or a joke please contact Simona at this number +39 3473053954.
+                  For all the guests who want to do a music perform or a joke during the wedding party please contact Simona at this number +39 3473053954.
                 </p>
               </div>
                    <!-- /*RSVP*/ -->
               <div class="card rsvp" data-rsvp>
                 <div class="title">RSVP</div>
                   <div class="rsvp-content" >
-                    <form action="weddingguestlist" method="POST">
+                    <form onsubmit="sendConfirmation(this)" id="rsvpForm">
                       <div class="form row">
                         <div class="input row">
                             <label for="">First Name <span>*</span></label>
-                              <input type="text" required name="" id="input file"> 
+                              <input type="text" required name="name" id="name"> 
                   </div>
   
                 <div class="input row">
                   <label for="">Last Name <span>*</span></label>
-                  <input type="text" required name="" id="">
+                  <input type="text" required name="surname" id="surname">
                 </div>
                 <div class="input row">
                   <label for="">Email <span>*</span></label>
-                  <input type="email"required name="" id="">
+                  <input type="email"required name="email" id="email">
                 </div>
                 <div class="input row">
-                  <label for="">Food allergy<span>*</span></label>
-                  <input type="text" name="" id="">
+                  <label for="foodallergy">Food allergy<span>*</span></label>
+                  <input type="text" name="foodallergy" id="foodallergy">
                 </div> 
              
                 <div class="form row">
                   <div class="input row">
-                      <label for="">Nr of guests<span>*</span></label>
-                      <input type="number" required name="" id="">
+                      <label for="numberofpartecipants">Nr of guests<span>*</span></label>
+                      <input type="number" required name="numberofpartecipants" id="numberofpartecipants">
                   </div>
  
                 <div class="option row">
                   <div class="row">
-                    <input type="checkbox" name="" id="">   
+                    <input type="checkbox" name="accepted" id="accepted">   
                           Accept with pleasure
                 </div>
                 <div class="row">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="decline" id="decline">
                         Regretfully Decline
                 </div>
                 <div class="row">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="vigil" id="vigil">
                     Present At The Prayer Vigil And At The Pizzata
                   </div>
                 <div class="row">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="brunch" id="brunch">
                           Present at the brunch
                 </div>
                 <!-- <button type="submit" onclick="return confirm ('Thanks you for your time')">Submit</button> -->
-                <button type="submit" onclick="">Submit</button>
+                <button type="submit">Submit</button>
 
                 </div>
                 </div>

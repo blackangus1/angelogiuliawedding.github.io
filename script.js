@@ -27,11 +27,26 @@ const highLightSelectedLink = (currentIndex) => {
   });
   links[currentIndex].classList.add("selectedLink");
 };
-
 /*Submit*/
-var lnkSubmit = document.getElementById('lnkSubmit');
-lnkSubmit.addEventListener('click', function(e) {
-	document.forms.myForm.submit();
-	e.preventDefault();
+jQuery("#rsvpForm").submit(function(e){
+  e.preventDefault();
 });
-/*End Submit*/
+
+function sendConfirmation(form) {
+  fields = form.elements;
+  const data = {};
+  jQuery("#rsvpForm :input").each(function(){
+    var input = $(this); // This is the jquery object of the input, do what you will
+       data[input[0].name] = input[0].value;
+   });
+
+  jQuery.post(
+    {
+      url: 'https://jessicaeroberto.it/administration/ag_wedding/confirmation',
+      data: data,
+      contentType: 'application/json'
+  })
+    .done(
+      (response)=>{console.log(response)}
+    );
+}

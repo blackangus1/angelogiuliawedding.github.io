@@ -2,7 +2,6 @@
 :root {
   --navbar-width: 135px;
   --color-light: #fff;
-  /* color: #6E6A5F; */
 }
 
 * {
@@ -10,11 +9,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  /* color: #6E6A5F; */
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh; */
+  /* width: 100vw; */
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,26 +26,13 @@ body {
   background: var(--c1--1--);
   /* color: #6E6A5F; */
 }
-  
-/* h1{
-  font-size: clamp(60px, 10vw, 100px);
-  line-height: clamp(60px, 10vw, 105px);
+html{
+  scroll-behavior: smooth;
 }
-
-h2{
-  font-size: clamp(30px, 5vw, 40px);
-  line-height: clamp(35px, 5vw, 45px);
-  text-transform: capitalize;
-}
-
-h3{
-  font-size: clamp(25px, 5vw, 35px);
-  line-height: clamp(30px, 5vw, 40px);
-  text-transform: capitalize;
-} */
-
 
 .container {
+  /* height: 100vh; */
+  /* width: 300vw; */
   display: flex;
   box-shadow: 0px 0px 15px 2px #1f1f1f5e;
   overflow: hidden;
@@ -67,16 +56,6 @@ aside {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-}
-.user-logo {
-  height: 150px;
-  width: 150px;
-}
-.user-logo img {
-  height: 100%;
-  width: 100%;
-  border: 1px double #1f1f1f;
-  border-radius: 50%;
 }
 nav,
 ul {
@@ -114,8 +93,8 @@ li:hover::before {
   width: 100%;
 }
 .card {
-  height: 500px;
-  padding: 30px;
+  height: 550px;
+  padding: 30px; 
   display: none;
   width: calc(100vw - 500px);
   /* color: var(--color-light); */
@@ -158,16 +137,15 @@ section .banner-area .banner-image{
 }
 .banner-area h1{
   text-align: right;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   font-size: 45px;
-  /* font-family: dancing script; */
-  /* color: var(--c1--3--); */
   color:brown;
   /* color: #6E6A5F; */
 }
 .banner-area h2{
   text-align: right;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
+  margin-bottom: 250px;
   font-size: 45px;
   font-family: dancing script;
   color: var(--c1--1--)
@@ -188,6 +166,9 @@ section .banner-area .banner-image{
   .banner-area{
       min-height: 600px;
   }
+  .banner-area h2{
+    font-size: 32px;
+}
   .banner-area h1{
       font-size: 32px;
   }
@@ -196,6 +177,48 @@ section .banner-area .banner-image{
   }
 }
   /*End Welcome*/
+
+  /*The church*/
+  /* .church-content{
+    width: 700px;
+  } */
+  .church {
+    height: 350px !important;
+    width: 700px !important;
+    color: #6E6A5F;
+ }
+ .church p{
+  color: #6E6A5F;
+}
+ .church .banner-image{
+  /* width: 700px; */
+  background-image: url(church.jpg);
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 80%;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+.google-map-church {
+ 
+  padding-bottom: 50%;
+  margin: 1px;
+  width: 600px;
+}
+
+.google-map-church iframe {
+  float: right;
+  height: 30%;
+  width: 40%;
+  left: 0;
+  top: 0;
+}
+
+   /*End church*/
 
 /*The Venue*/
 .venue {
@@ -258,13 +281,13 @@ section .banner-area .banner-image{
 
 /*Accomodation*/
 .accomodation {
+  height: 300px !important;
+  width: 600px !important;
   color: #6E6A5F;
 }
 
 .accomodation p
 {
-        /* text-align: center; */
-        /* line-height: 60px; */
         padding-top: 0.4em;
         color: #6E6A5F;
 }
@@ -274,6 +297,8 @@ section .banner-area .banner-image{
 /*Itinerary*/
 .itinerary {
   color: #6E6A5F ;
+  height: 80px !important;
+  /* width: 400px !important; */
 }
 
   .itinerary .filter-btns{
@@ -322,7 +347,7 @@ section .banner-area .banner-image{
 
 .form label{
   /* display: inline; */
-  padding-bottom: 0.5em;
+  padding-bottom: 0.6em;
   
 }
 .form{   
@@ -363,6 +388,8 @@ button{
 /*About*/
 .about{
   color: #6E6A5F;
+  height: 10px !important;
+  /* width: 400px !important; */
 }
 .about  p{
   font-size: 60%;
@@ -371,9 +398,11 @@ button{
   text-align: center; 
   color: #6E6A5F;
   line-height: 60px;
-  /* margin: 0.1em; */ù
+  margin: 0.1em;
 } 
+
 /*End About*/
+
 .selectedLink {
   background: linear-gradient(100deg, violet, red);
   color: var(--color-light);
@@ -389,3 +418,4 @@ button{
     opacity: 1;
   }
 }
+
