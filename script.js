@@ -38,6 +38,10 @@ function sendConfirmation(form) {
   jQuery("#rsvpForm :input").each(function(){
     var input = $(this); // This is the jquery object of the input, do what you will
        data[input[0].name] = input[0].value;
+
+       if(input[0].value === 'on') {
+        data[input[0].name] = true;
+       }
    });
 
   jQuery.post(
