@@ -43,8 +43,12 @@ function sendConfirmation(form) {
   jQuery.post(
     {
       url: 'https://jessicaeroberto.it/administration/ag-wedding/confirmation',
-      data: data,
-      contentType: 'application/json'
+      headers: {
+        Authorization: 'Bearer cbb116f8b9708269d7e6339c13101d00d0caec84442e1e46e0861b2d61fef2b2'
+      },
+      contentType: "application/json",
+      dataType: 'json',
+      data: data
   })
     .done(
       (response)=>{console.log(response)}
