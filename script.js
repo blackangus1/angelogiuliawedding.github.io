@@ -48,7 +48,7 @@ function sendConfirmation(form) {
       },
       contentType: "application/json",
       dataType: 'json',
-      data: data
+      data: JSON.stringify(data)
   })
     .done(
       (response)=>{console.log(response)}
