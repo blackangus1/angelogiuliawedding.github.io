@@ -25,6 +25,7 @@ body {
   --c1--3--: #c6754d;
   background: var(--c1--1--);
   /* color: #6E6A5F; */
+  overflow: scroll;
 }
 html{
   scroll-behavior: smooth;
@@ -114,10 +115,8 @@ li:hover::before {
   font-size: 1.5rem;
 }
   /*Welcome*/
-.welcome {
+/* .welcome {
   background: #282828;
-  /* background-image: url(image3.jpg); */
-  /* color: #6E6A5F; */
 }
 section .banner-area .banner-image{
   display: flex;
@@ -137,19 +136,15 @@ section .banner-area .banner-image{
 }
 .banner-area h1{
   text-align: right;
-  /* margin-bottom: 15px; */
   font-size: 45px;
   color:brown;
-  /* color: #6E6A5F; */
 }
 .banner-area h2{
   text-align: right;
-  /* margin-bottom: 15px; */
   margin-bottom: 250px;
   font-size: 45px;
   font-family: dancing script;
   color: var(--c1--1--)
-  /* color: #6E6A5F; */
 }
 .banner-area span{
   color: var(--c1--3--);
@@ -158,7 +153,6 @@ section .banner-area .banner-image{
   margin-bottom: 50px;
   font-size: 30px;
   color:brown;
-  /* color: #6E6A5F; */
   text-align: right;
 }
 
@@ -175,6 +169,55 @@ section .banner-area .banner-image{
   .banner-area h3{
       font-size: 20px;
   }
+} */
+
+.slides{
+  position: relative;
+  width: 750px;
+  height: 500px;
+
+}
+.slides::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  /* background-color: rgba(0, 0, 0, .25); */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.slides:hover::after{
+  opacity: 1;;
+}
+.image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation :cycle 3.5s linear infinite 0s forwards;
+  animation-play-state:running;
+
+}
+.slides:hover .image{
+  animation-play-state: running;
+}
+.image2{
+  z-index: 10;
+  animation-delay: 0.30s;
+}
+/* .image3{
+  z-index: 9;
+  animation-delay: 0.30s;
+} */
+.image4{
+  z-index: 9;
+  animation-delay: 1s;
+}
+.image5{
+  z-index: 8;
+  animation-delay: 1.9s;
 }
   /*End Welcome*/
 
