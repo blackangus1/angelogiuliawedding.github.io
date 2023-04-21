@@ -99,8 +99,8 @@ li:hover::before {
   display: none;
   width: calc(100vw - 500px);
   /* color: var(--color-light); */
-  color:brown;
-  /* color: #6E6A5F; */
+  /* color:brown; */
+  color: #6E6A5F;
   transform: translateX(-100%);
 }
 .card.active {
@@ -235,7 +235,12 @@ section .banner-area .banner-image{
     width: 700px !important;
     color: #6E6A5F;
  }
- .church p{
+ .church {
+  width: 700px;
+  height: 700px;
+  color: #6E6A5F;
+}
+.church p{
   color: #6E6A5F;
 }
  .church .banner-image{
@@ -244,8 +249,8 @@ section .banner-area .banner-image{
   /* position: absolute; */
   top: 0;
   left: 0;
-  width: 50%;
-  height: 80%;
+  width: 90%;
+  height: 50%;
   background-size: cover;
   background-position: center center;
   z-index: -1;
