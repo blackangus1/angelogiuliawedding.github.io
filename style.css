@@ -115,6 +115,7 @@ li:hover::before {
   font-size: 1.5rem;
 }
   /*Welcome*/
+
 /* .welcome {
   background: #282828;
 }
@@ -182,7 +183,6 @@ section .banner-area .banner-image{
   position: absolute;
   inset: 0;
   z-index: 15;
-  /* background-color: rgba(0, 0, 0, .25); */
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -207,10 +207,6 @@ section .banner-area .banner-image{
   z-index: 10;
   animation-delay: 0.30s;
 }
-/* .image3{
-  z-index: 9;
-  animation-delay: 0.30s;
-} */
 .image4{
   z-index: 9;
   animation-delay: 1s;
@@ -218,6 +214,15 @@ section .banner-area .banner-image{
 .image5{
   z-index: 8;
   animation-delay: 1.9s;
+}
+
+@keyframes cycle{
+  from{
+    visibility: visible; z-index: 11;
+  }
+  to{
+    visibility: hidden; z-index: 0;
+  }
 }
   /*End Welcome*/
 
