@@ -254,10 +254,11 @@ section .banner-area .banner-image{
   padding-bottom: 50%;
   margin: 1px;
   /* width: 600px; */
+  text-align: center;
 }
 
 .google-map-church iframe {
-  float: left;
+  float: right;
   height: 30%;
   width: 40%;
   left: 0;
