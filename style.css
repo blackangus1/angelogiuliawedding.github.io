@@ -258,7 +258,7 @@ section .banner-area .banner-image{
 }
 
 .google-map-church iframe {
-  float: right;
+  /* float: right; */
   height: 30%;
   width: 40%;
   left: 0;
