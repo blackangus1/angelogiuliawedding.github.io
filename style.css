@@ -466,3 +466,12 @@ button{
   }
 }
 
+
+@media screen and (min-width: 37.5em) {
+  .card .active{
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 1329rem;
+  }
+   }
+
