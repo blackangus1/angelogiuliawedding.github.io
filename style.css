@@ -169,21 +169,7 @@ section .banner-area .banner-image{
   color:brown;
   text-align: right;
 }
-
-@media(max-width:800px){
-  .banner-area{
-      min-height: 600px;
-  }
-  .banner-area h2{
-    font-size: 32px;
-}
-  .banner-area h1{
-      font-size: 32px;
-  }
-  .banner-area h3{
-      font-size: 20px;
-  }
-} */
+ */
 
 .slides {
     position: relative;
@@ -244,8 +230,7 @@ section .banner-area .banner-image{
 
 /*The Venue*/
 .venue {
-    /* color : var(--c1--3--);  */
-    /* color :crimson; */
+    overflow-y: scroll;
     color: #6E6A5F;
 
 }
@@ -347,6 +332,7 @@ section .banner-area .banner-image{
 .rsvp {
     background-size: 300px;
     color: #6E6A5F;
+    overflow-y: scroll;
 }
 
 .rsvp .rsvp-content {
