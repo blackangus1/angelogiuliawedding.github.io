@@ -105,6 +105,7 @@ function sendConfirmation(form) {
             (response) => {
                 console.log(response);
                 // TODO: back to the welcome page
+                window.location.reload();
             }
         );
 }
