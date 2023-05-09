@@ -77,11 +77,7 @@ function sendConfirmation(form) {
     const data = {};
     jQuery("#rsvpForm :input").each(function () {
         var input = $(this); // This is the jquery object of the input, do what you will
-        // data[input[0].name] = input[0].value;
 
-        // if (input[0].value === 'on') {
-        //     data[input[0].name] = true;
-        // }
         if (input[0].type === 'checkbox') {
             data[input[0].name] = input[0].checked;
         }
@@ -105,7 +101,23 @@ function sendConfirmation(form) {
             (response) => {
                 console.log(response);
                 // TODO: back to the welcome page
-                window.location.reload();
+                jQuery('#rsvpForm').hide();
+                jQuery('#rsvp-feedback').show();
+
+                setTimeout(() => {
+                    jQuery("#rsvpForm :input").each(function () {
+                        var input = $(this); // This is the jquery object of the input, do what you will
+                        if (input[0].type === 'checkbox') {
+                            jQuery(input).prop('checked', false);
+                        }
+                        else{
+                            jQuery(input).val(null);
+                        }
+                    });
+
+                    jQuery('#rsvp-feedback').fadeOut();
+                    jQuery('#rsvpForm').fadeIn();
+                }, 1000);
             }
         );
 }

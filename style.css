@@ -423,6 +423,10 @@ button {
     margin: 0 auto;
 }
 
+#rsvp-feedback {
+    display: none;
+}
+
 /*END RSVP*/
 
 /*About*/
@@ -437,11 +441,13 @@ button {
     text-align: center;
     color: #6E6A5F;
     line-height: 45px;
-/*     margin: 0.1em; */
+    /*     margin: 0.1em; */
 }
+
 .about-content {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
+
 /*End About*/
 
 .selectedLink {
