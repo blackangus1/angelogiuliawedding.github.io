@@ -77,10 +77,17 @@ function sendConfirmation(form) {
     const data = {};
     jQuery("#rsvpForm :input").each(function () {
         var input = $(this); // This is the jquery object of the input, do what you will
-        data[input[0].name] = input[0].value;
+        // data[input[0].name] = input[0].value;
 
-        if (input[0].value === 'on') {
-            data[input[0].name] = true;
+        // if (input[0].value === 'on') {
+        //     data[input[0].name] = true;
+        // }
+        if (input[0].type === 'checkbox') {
+            data[input[0].name] = input[0].checked;
+        }
+        else{
+            data[input[0].name] = input[0].value;
+            
         }
     });
 
