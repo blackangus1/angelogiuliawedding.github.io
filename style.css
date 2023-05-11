@@ -497,10 +497,20 @@ button {
     }
 
     #sidebarToggleButton {
-        background: linear-gradient(100deg, violet, red);
+        /* background: linear-gradient(100deg, violet, red);
         color: var(--color-light);
         font-weight: 600;
+        border: none; */
+
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: white;
         border: none;
+        padding: 4px;
+        /* color: black; */
+        color:  #6E6A5F;;
+        font-size: 19px;
     }
 
     #closeSidebarButton {
