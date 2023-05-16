@@ -503,14 +503,14 @@ button {
         border: none; */
 
         position: absolute;
-        top: 0;
+        top: 3;
         z-index: 1;
         background: white;
         border: none;
         padding: 4px;
         /* color: black; */
         color:  #6E6A5F;;
-        font-size: 24px;
+        font-size: 25px;
     }
 
     #closeSidebarButton {
