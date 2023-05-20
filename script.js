@@ -42,7 +42,7 @@ if (welcome_section.length) {
         const previousImage = images[activeImage];
         activeImage = (activeImage === (images.length - 1)) ? 0 : activeImage + 1;
         slideImage(images[activeImage], previousImage);
-    }, 3000);
+    }, 2000);
 }
 
 function slideImage(imageIn, imageOut) {
