@@ -288,8 +288,8 @@ section .banner-area .banner-image{
 
 /*Accomodation*/
 .accomodation {
-    height: 300px;
-    width: 600px;
+    /* height: 300px;
+    width: 600px; */
     color: #6E6A5F;
     overflow-y: scroll;
 }
