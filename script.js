@@ -37,7 +37,7 @@ const welcome_section = jQuery('.welcome');
 if (welcome_section.length) {
     const images = jQuery(welcome_section[0]).find('.image');
     let activeImage = 0;
-    jQuery(images[activeImage]).fadeIn(500);
+    jQuery(images[activeImage]).fadeIn(200);
     setInterval(() => {
         const previousImage = images[activeImage];
         activeImage = (activeImage === (images.length - 1)) ? 0 : activeImage + 1;
@@ -46,8 +46,8 @@ if (welcome_section.length) {
 }
 
 function slideImage(imageIn, imageOut) {
-    jQuery(imageOut).fadeOut(500, () => {
-        jQuery(imageIn).fadeIn(500);
+    jQuery(imageOut).fadeOut(200, () => {
+        jQuery(imageIn).fadeIn(200);
     });
 }
 
