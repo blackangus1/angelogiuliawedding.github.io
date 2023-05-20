@@ -304,6 +304,7 @@ section .banner-area .banner-image{
 /*Itinerary*/
 .itinerary {
     color: #6E6A5F;
+    overflow-y: scroll;
 }
 
 .itinerary .filter-btns {
