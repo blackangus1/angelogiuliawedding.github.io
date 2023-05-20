@@ -291,6 +291,7 @@ section .banner-area .banner-image{
     height: 300px;
     width: 600px;
     color: #6E6A5F;
+    overflow-y: scroll;
 }
 
 .accomodation p {
