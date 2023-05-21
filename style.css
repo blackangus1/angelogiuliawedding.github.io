@@ -505,15 +505,15 @@ button {
         border: none; */
 
         position: absolute;
-        left: 5;
-        top: 4;
+        left: 0;
+        top: 0;
         z-index: 1;
         background: white;
         border: none;
         padding: 4px;
         /* color: black; */
         color:  #6E6A5F;;
-        font-size: 27px;
+        font-size: 24px;
     }
 
     #closeSidebarButton {
@@ -527,10 +527,10 @@ button {
         color: black;
     }
 
-    .accomodation {
+    /* .accomodation {
         width: 100%;
         height: unset;
-    }
+    } */
 
     .rsvp-content {
         overflow-y: scroll;
