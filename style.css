@@ -252,6 +252,7 @@ li:hover::before {
 .accomodation p {
     padding-top: 0.4em;
     color: #6E6A5F;
+    font-size: 15px;
 }
 
 /*End accomodation*/
@@ -393,7 +394,7 @@ button {
 }
 
 .about p {
-    font-size: 50%;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     text-align: center;
