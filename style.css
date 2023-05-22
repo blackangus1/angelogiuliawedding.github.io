@@ -129,47 +129,6 @@ li:hover::before {
 
 }
 
-/* .welcome {
-  background: #282828;
-}
-section .banner-area .banner-image{
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-.banner-area .banner-image{
-  background-image: url(image2.jpeg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
-}
-.banner-area h1{
-  text-align: right;
-  font-size: 45px;
-  color:brown;
-}
-.banner-area h2{
-  text-align: right;
-  margin-bottom: 250px;
-  font-size: 45px;
-  font-family: dancing script;
-  color: var(--c1--1--)
-}
-.banner-area span{
-  color: var(--c1--3--);
-}
-.banner-area h3{
-  margin-bottom: 50px;
-  font-size: 30px;
-  color:brown;
-  text-align: right;
-}
- */
 
 .slides {
     position: relative;
@@ -187,10 +146,6 @@ section .banner-area .banner-image{
 
 /*End Welcome*/
 
-/*The church*/
-/* .church-content{
-  width: 700px;
-} */
 .church {
     color: #6E6A5F;
     overflow-y: scroll;
@@ -434,16 +389,17 @@ button {
 /*About*/
 .about {
     color: #6E6A5F;
+    overflow-y: scroll;
 }
 
 .about p {
-    font-size: 45%;
+    font-size: 50%;
     display: flex;
     justify-content: center;
     text-align: center;
     color: #6E6A5F;
-    line-height: 45px;
-    /*     margin: 0.1em; */
+    /* line-height: 50px; */
+    margin: 0.1em;
 }
 
 .about-content {
