@@ -403,7 +403,7 @@ button {
 }
 
 .about-content {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 /*End About*/
